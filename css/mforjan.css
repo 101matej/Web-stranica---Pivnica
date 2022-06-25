@@ -1,0 +1,394 @@
+/*body*/
+body{
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url('../materijali/pozadina.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: #372b25;
+    font-family: "Comic Sans MS";
+    width: 100%;
+    margin: auto;
+}
+
+/*footer*/
+footer{
+    text-align: center;
+    color: white;
+    background: #683F37;
+    padding: 30px;
+    bottom: 0;
+}
+
+/*logo*/
+.pozicijaLoga{
+    text-align: center;
+    position: relative;
+    top: -70px;
+}
+
+.logo{
+    margin: auto;
+    left: 720px;
+    width: 250px;
+}
+
+/*naslov stranice*/
+.naslov{
+    margin: auto;
+    position: relative;
+    top: -100px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #683F37;
+}
+
+/*padajući izbornik*/
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+  z-index: 1;
+}
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #e7d8d3;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  padding: 8px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #b78b7b;
+}
+
+/*o autoru*/
+.autor{
+    margin: auto;
+    margin-bottom: 50px;
+    color: black;
+    padding: 15px;
+    background-color: #cfb2a7;
+    border: 7px solid #683F37;
+    width: 30%;
+}
+
+/*forma*/
+.forma{
+    background-color: #cfb2a7;
+    padding: 50px;
+    margin: auto;
+    border: 7px solid #683F37;
+    width: 50%;
+}
+
+/*textboxovi prijava*/
+.korimePrijavaTextbox{
+    margin-left: 25px;
+}
+.lozinkaPrijavaTextbox{
+    margin-left: 78px;
+}
+
+/*textboxovi registracija*/
+.imeRegistracijaTextbox{
+    margin-left: 120px;
+}
+.prezimeRegistracijaTextbox{
+    margin-left: 91px;
+}
+.datumRodenjaRegistracijaTextbox{
+    margin-left: 40px;
+}
+.emailRegistracijaTextbox{
+    margin-left: 57px;
+}
+.korimeRegistracijaTextbox{
+    margin-left: 43px;
+}
+.lozinkaRegistracijaTextbox{
+    margin-left: 96px;
+}
+.ponovljenaLozinkaRegistracijaTextbox{
+    margin-left: 49px;
+}
+
+/*gumb za slanje podataka*/
+.submit{
+    margin: auto;
+    margin-bottom: 150px;
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    background-color: white; 
+    color: black; 
+    border: 3px solid #683F37;
+    font-weight: bolder;
+}
+.submit:hover {
+  background-color: #683F37;
+  color: white;
+  font-weight: bolder;
+}
+
+/*gumbovi za sortiranje*/
+/*gumb za slanje podataka*/
+.submit2{
+    margin: auto;
+    height: 30px;
+    width: 300px;
+    font-size: 15px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #683F37;
+    font-weight: bolder;
+}
+.submit2:hover {
+  background-color: #683F37;
+  color: white;
+  font-weight: bolder;
+}
+
+/*php promjena labela kada je greska*/
+.neispravanElement{
+    color: red;
+}
+
+/*tablica*/
+#tablica{
+    margin: auto;
+    position: relative;
+    top: -100px;
+    background-color: #cfb2a7;
+    padding: 15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+th{
+    height: 55px;
+    width: 250px;
+    font-size: 18px;
+    background-color: #683F37;
+    color: white;
+}
+td{
+    height: 35px;
+    text-align: center;
+}
+tr:hover{
+    background-color: #683F37;
+    color: white;
+}
+
+/*textboxovi zemlje podrijetla*/
+.idZemljeTextbox{
+    margin-left: 48px;
+}
+.nazivZemljeTextbox{
+    margin-left: 25px;
+}
+.glavniGradTextbox{
+    margin-left: 117px;
+}
+
+/*combobox pivnica*/
+#pivnica{
+    width: 190px;
+}
+
+/*textboxovi pivnice*/
+.idPivniceTextbox{
+    margin-left: 91px;
+}
+.nazivPivniceTextbox{
+    margin-left: 67px;
+}
+.adresaPivniceTextbox{
+    margin-left: 111px;
+}
+.brojTelefonaTextbox{
+    margin-left: 64px;
+}
+#moderator{
+    margin-left: 12px;
+    width: 217px;
+}
+#cjenik{
+    margin-left: 54px;
+    width: 217px;
+}
+
+/*textboxovi validacija*/
+.email{
+    margin-left: 85px;
+}
+.kljuc{
+    margin-left: 5px;
+}
+
+/*comboboxovi dnevnik rada*/
+.korisnikCombobox{
+    margin-left: 29px;
+    width: 240px;
+}
+.tipRadnjeCombobox{
+    margin-left: 6px;
+    width: 240px;
+}
+
+/*textboxovi pive*/
+.idPiveTextbox{
+    margin-left: 99px;
+}
+.nazivPiveTextbox{
+    margin-left: 75px;
+}
+.cijenaPiveTextbox{
+    margin-left: 71px;
+}
+.opisPiveTextbox{
+    margin-left: 84px;
+}
+.rokTrajanjaTextbox{
+    margin-left: 24px;
+    width: 213px;
+}
+.slikaInput{
+    margin-left: 80px;
+}
+.volumenPiveTextbox{
+    margin-left: 57px;
+}
+.zemljaPodrijetlaCombobox{
+    margin-left: 29px;
+    width: 240px;
+}
+.vrstaCombobox{
+    margin-left: 14px;
+    width: 240px;
+}
+
+/*slideshow*/
+.slideshow {
+    width:350px; 
+    height:400px; 
+    overflow:visible; 
+    position:relative;
+    left: 520px;
+    top: -50px;
+}
+.slideshow img{
+    position:relative;
+    top: 50px;
+    left: 150px;
+    animation:slideshow 16s infinite; 
+    opacity:0; 
+    width: 100%; 
+    height: auto;
+}
+@keyframes slideshow {
+    25%{opacity:1;} 
+    40%{opacity:0;}
+} 
+.slideshow img:nth-child(1){animation-delay:0s;}
+.slideshow img:nth-child(2){animation-delay:5s;}
+.slideshow img:nth-child(3){animation-delay:10s;}
+
+/*comoboboxovi stavke cjenika*/
+.cjenikCombobox{
+    margin-left: 10px;
+    width: 217px;
+}
+.pivoCombobox{
+    margin-left: 25px;
+    width: 217px;
+}
+
+/*textboxovi popis piva*/
+.korisnikTextbox{
+    margin-left: 65px;
+}
+.pivoTextbox{
+    margin-left: 95px;
+}
+#ocjenaCombobox{
+    margin-left: 11px;
+    width: 217px;
+}
+
+/*gumb id*/
+#id{
+    width: 40px;
+    color: black;
+    background-color: white;
+}
+#id:hover {
+  background-color: lightyellow;
+  color: black;
+}
+
+/*dokumentacija*/
+.dokumentacija{
+    margin: auto;
+    margin-bottom: 50px;
+    color: black;
+    padding: 15px;
+    background-color: #cfb2a7;
+    border: 7px solid #683F37;
+    width: 80%;
+}

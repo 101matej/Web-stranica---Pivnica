@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Matej Forjan">
+        <meta name="description" content="08.06.2022.">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <link href="css/mforjan.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="index.php">Početna stranica</a></li>
+                </ul>
+
+            </div>
+
+            <div class = "pozicijaLoga">
+                <a href = "index.php">
+                    <img class = "logo" src = "materijali/logo.png" alt = "Logo">
+                </a>
+            </div>
+
+            <h1 class = "naslov" style = "text-align: center">
+                DOKUMENTACIJA
+            </h1>
+
+        </header>
+
+        <section>
+            <div class = "dokumentacija">
+                <h2 style = "margin-top: 20px; margin: auto; text-align: center">DOKUMENTACIJA</h2>
+                <h3><b>Opis projektnog zadatka:</b></h3>
+                <p style="text-align: justify;">Tema projektnog zadatka bila je "Pivnica". Zadatak je bio izraditi web stranica koja omogućava se funkcionalnosti koje su potrebne
+                kako bi se omogućio rad pivnice. Također, postoje četiri uloge korisnika koje se pojavljuju u projektnom zadatku, a to su administrator,
+                moderator, registrirani korisnik te neregistrirani korisnik. Neke od funkcionalnosti koje omogućava web stranica su kreiranje pivnica te
+                dodjeljivanje moderatora pojedinoj pivnici, kreiranje piva te dodjeljivanje zemlje podrijetla i vrste pojedinoj pivi, kreiranje narudžbi,
+                računa, ocjenjivanje pive i slično. Također, administrator ima mogućnost uvida svih podataka i aktivnosti korisnika. Korisnici se mogu
+                prijaviti i registrirati.</p>
+                
+                <h3><b>Opis projektnog rješenja:</b></h3>
+                <p style="text-align: justify">Neregistrirani korisnik je korisnik koji ima najmanje mogućnosti unutar web stranice. Njemu je prikazana početna stranica, prijava,
+                registracija, galerija, rang lista, informacije o autoru te dokumentacija. Registrirani korisnik ima sve mogućnosti kao i neregistrirani
+                korisnik uz određene dodatke. Registrirani korisnik može pregledati vlastite narudžbe, platiti narudžbe te vidjeti popis piva koje je naručio
+                i ocijeniti ona piva koja se nalaze u narudžbama koje su plaćene u cjelosti. Za kraj, korisnik ima mogućnost odjave. Moderator ima sve 
+                mogućnosti koje su navedene u prethodnim ulogama uz dodatak kreiranja, pregleda i ažuriranja piva pridruživanja zemlji podrijetla u pivnicama
+                za koje je zadužen. Zatim može kreirati i pregledati stavke pojedinih cjenika u pivnicama. Pregledava sve narudžbe korisnika te pregledava
+                korisnike koji imaju neplaćene narudžbe te iz može blokirati. Administrator ima sve mogućnosti kao i sve tri prethodne uloge te još može
+                kreirati, pregledati i ažurirati pivnice, dodijeliti moderatore pivnici. Osim toga može kreirati, pregledati i ažurirati zemlje podrijetla.
+                Administrator može blokirati ili odblokirati željenog korisnika te ima mogućnost pregleda svih aktivnosti unutar stranice.</p>
+                
+                <h3><b>Navigacijski dijagram:</b></h3>
+                <img style = "margin: auto; text-align: center; width: 1520px; height: 1000px; border: 4px solid #683F37;" src = "materijali/navigacijski.png" alt = "Navigacijski dijagram">
+                
+                <br><br>
+                
+                <h3><b>ERA dijagram:</b></h3>
+                <img style = "margin: auto; text-align: center; width: 1520px; height: 1500px; border: 4px solid #683F37;" src = "materijali/era.png" alt = "ERA dijagram">
+                
+                <br><br>
+                
+                <h3><b>Popis i opis skripata, mapa od kojih se sastoji projekt:</b></h3>
+                <ul>
+                    <li><b>prijava.php: </b>prijava korisnika na stranicu</li>
+                    <li><b>registracija.php: </b>registracija korisnika na stranicu</li>
+                    <li><b>validiraj.php: </b>validacija email adrese novoregistriranog korisnika</li>
+                    <li><b>.htaccess: </b>datoteka u kojoj se nalazi korisnik s istim korisničkim imenom i lozinkom kao i pristup
+                    do baze podataka</li>
+                    <li><b>.htpasswd: </b>datoteka u kojoj se nalazi generirana lozinka</li>
+                    <li><b>korisnici.php: </b>ispis svih korisnika</li>
+                    <li><b>baza.class.php: </b>klasa baza koja služi za spajanje na bazu, izvršavanje upita i odspajanje od baze</li>
+                    <li><b>blokirani_korisnici.php: </b>administrator ima mogućnost blokiranja i odblokiranja korisnika</li>
+                    <li><b>dnevnik.class.php: </b>klasa dnevnik koja služi za praćenje aktivnosti korisnika te upisivanje tih aktivnosti u bazu</li>
+                    <li><b>dnevnik_rada.php: </b>administrator ima mogućnost uvida u sve aktivnosti svih korisnika na stranici</li>
+                    <li><b>dokumentacija.html: </b>pregled informacija o projektu</li>
+                    <li><b>galerija.php: </b>galerija slika piva u odabranoj pivnici uz mogućnost sortiranja po zemlji podrijetla ili cijeni te 
+                    mogućnost filtriranja po ocjeni</li>
+                    <li><b>index.php: </b>početna stranica</li>
+                    <li><b>narudzbe.php: </b>pregled svih narudžbi korisnika s ukupnim iznosom računa i plaćenog iznosa računa;
+                    posebno su označene one narudžbe koje nisu plaćene u potpunosti</li>
+                    <li><b>neplacene_narudzbe.php: </b>lista korisnika koji imaju neplaćene narudžbe s informacijom ukupnog iznosa kojeg
+                    korisnik mora platiti; mogućnost blokiranja korisnika</li>
+                    <li><b>o_autoru.html: </b>informacije o autoru stranice</li>
+                    <li><b>pive.php: </b>kreiranje, pregledavanje i ažuriranje piva te pridruživanje zemlji podrijetla u pivnicama za koje
+                    je moderator zadužen</li>
+                    <li><b>pivnice.php: </b>kreiranje, pregledavanje i ažuriranje pivnica te dodjeljivanje moderatora pivnici</li>
+                    <li><b>placanje_narudzbi.php: mogućnost plaćanja narudžbi; kada korisnik plati sve narudžbe automatski se deblokira
+                    ukoliko je bio blokiran</b></li>
+                    <li><b>popis_narucenih_piva.php: </b>popis piva korisnika koje je naručio i ako je pivo u narudžbi koja je plaćena
+                    u potpunosti može dati svoju ocjenu od 1 do 5</li>
+                    <li><b>pregled_narudzbi.php: </b>pregled narudžba korisnika</li>
+                    <li><b>rang_lista.php: </b>rang lista broja naručenih piva po pivnici u vremenskom periodu (od-do)</li>
+                    <li><b>sesija.class.php: </b>klasa sesija koja služi za pokretanje sesije te zatvaranje sesije</li>
+                    <li><b>stavke_cjenika.php: </b>kreiranje i pregledavanje popisa piva koje se mogu naručivati (cjenik) za pivnice u kojima
+                    je zadužen na način da odabere piva koje je prethodno dodao; automatski kada se doda piva je prosječna ocjena pive
+                    jednaka 0</li>
+                    <li><b>zaglavlje.php: </b>uključivanje klasa baza, sesija i dnevnik, kreiranje sesije te sadrži funkciju za odjavu korisnika</li>
+                    <li><b>zemljePodrijetla.php: </b>kreiranje, pregledavanje te ažuriranje zemlje podrijetla</li>
+                    <li><b>mapa css:</b>
+                        <ul>
+                            <li>sadrži css datoteku mforjan.css</li>
+                        </ul>
+                    </li>
+                    <li><b>mapa izvorne datoteke: </b>
+                        <ul>
+                            <li>sadrži datoteku mforjan_mysqlworkbench_sql.sql koja sadrži skriptu izvezenu iz alata MySQL Workbench,
+                            mforjan_workbench.mwb, mforjan_workbench.mwb.bak te navigacijski.xml</li>
+                        </ul>
+                    </li>
+                    <li><b>mapa javascript: </b>
+                        <ul>
+                            <li>sadrži datoteku mforjan.js u kojoj se nalaze validacije na strani klijenta prilikom registracije</li>
+                        </ul>
+                    </li>
+                    <li><b>mapa materijali: </b>
+                        <ul>
+                            <li>sadrži sve slike koje se koriste na stranici</li>
+                        </ul>
+                    </li>
+                    <li><b>mapa obrasci: </b>
+                        <ul>
+                            <li>sadrži datoteke prijava.php, registracija.php, validiraj.php</li>
+                        </ul>
+                    </li>
+                    <li><b>mapa privatno: </b>
+                        <ul>
+                            <li>sadrži datoteke .htaccess, .htpasswd, korisnici.php</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3><b>Popis i opis korištenih tehnologija i alata:</b></h3>
+                <ul>
+                    <li><b>Javascript: </b>validacija na strani klijenta</li>
+                    <li><b>PHP: </b>rad s bazom te provjera zahtjeva POST metodama</li>
+                    <li><b>Netbeans IDE: </b>alat u kojem je izrađen ovaj projekt</li>
+                    <li><b>Filezilla: </b>alat za prijenos datoteka na server</li>
+                    <li><b>MySQL Workbench: </b>alat u kojem se modelirala baza podataka</li>
+                    <li><b>phpMyAdmin </b>unos podataka u tablice, izrađivanje SQL upita</li>
+                    <li><b>Terminal: </b>web server pomoću kojeg je testirano programsko rješenje</li>
+                </ul>
+                
+                <h3><b>Popis i opis korištenih vanjskih izvora:</b></h3>
+                <ul>
+                    <li><b>Google reCAPTCHA: </b>zaštita od automata</li>
+                </ul>
+                
+            </div>
+        </section>
+        <footer>
+            <address><b>Kontakt:</b> 
+                <a style="color: white; text-decoration: none;" href="mailto:mforjan@foi.hr">
+                    Matej Forjan</a></address>
+            <p>&copy; 2022 M. Forjan</p>
+            <img style="width: 60px; height: 60px; position: relative; top: -7px;" src="materijali/HTML5.png" alt="Slika">
+            <img style="width: 75px; height: 75px; position: relative; top: 0px;" src="materijali/CSS3.png" alt="Slika">
+        </footer>
+    </body>
+</html>
